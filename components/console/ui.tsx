@@ -40,7 +40,7 @@ export function Ledger({
 }) {
   return (
     <div className="overflow-x-auto rounded-xl border border-white/10">
-      <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+      <table className="w-full min-w-[760px] border-collapse whitespace-nowrap text-left text-sm">
         <thead className="bg-[#0c1017] font-mono text-[10px] tracking-[0.16em] text-muted">
           <tr>
             {columns.map((column) => (

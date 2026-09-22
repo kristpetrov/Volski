@@ -20,10 +20,10 @@ export function FilterBar<T extends string>({
   label: string;
 }) {
   return (
-    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex flex-col gap-3">
       <form
         role="search"
-        className="sm:w-64"
+        className="w-full max-w-xs"
         onSubmit={(event) => event.preventDefault()}
       >
         <label>
