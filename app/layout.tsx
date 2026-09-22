@@ -13,8 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Volski POS",
-  description: "Point of sale for the counter. Orders, payments, and the daily close.",
+  title: {
+    default: "Volski POS",
+    template: "%s · Volski POS",
+  },
+  description:
+    "Point of sale and payment operations for the counter. Orders, customers, refunds, and receipt mail.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

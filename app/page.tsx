@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { Mark } from "@/components/mark";
+
 const features = [
   {
     label: "01",
@@ -24,17 +27,7 @@ export default function Home() {
 
       <header className="relative z-10 mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-6">
         <div className="flex items-center gap-3">
-          <span className="grid size-8 place-items-center rounded-md border border-accent/30 bg-accent/10 text-accent">
-            <svg viewBox="0 0 24 24" className="size-4" aria-hidden="true">
-              <path
-                d="M4 7 L12 18 L20 7"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
+          <Mark />
           <span className="font-mono text-xs tracking-[0.28em] text-foreground">
             VOLSKI
           </span>
@@ -55,6 +48,17 @@ export default function Home() {
           Volski is a point-of-sale system for taking orders, collecting
           payment, and closing out the day.
         </p>
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <Link
+            href="/dashboard"
+            className="inline-flex h-11 items-center rounded-full border border-accent/40 bg-accent/10 px-5 text-sm text-accent transition-colors hover:bg-accent/20"
+          >
+            Open dashboard
+          </Link>
+          <span className="font-mono text-[11px] tracking-[0.18em] text-muted">
+            DESIGN CONCEPT
+          </span>
+        </div>
 
         <ul className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-3">
           {features.map((feature) => (
